@@ -12,6 +12,37 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --font-base: "DM Sans", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-mono: "DM Mono", SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --font-size-base: 1rem;
+
+  --primary-color: #edf2f8;
+  --secondary-color: #313bac;
+  --black-color: #030303;
+  --lightGray-color: #e4e4e4;
+  --gray-color: #6b7688;
+  --brown-color: #46364a;
+  --white-color: #ffffff;
+  --red-color: #ff0000;
+  --green-color: #00ff00;
+  --blue-color: #0000ff;
+  --yellow-color: #ffff00;
+  --orange-color: #ffa500;
+  --purple-color: #800080;
+  --pink-color: #ffc0cb;
+  --cyan-color: #00ffff;
+  --transparent-color: transparent;
+  --currentColor: currentColor;
+  --inherit-color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
 
 a {
