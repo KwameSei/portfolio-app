@@ -1,5 +1,15 @@
 import React from 'react'
 import bVideo from "./assets/background-video.mp4"
+import { 
+  Header, 
+  Footer, 
+  Home, 
+  About, 
+  Skills, 
+  Testimonials, 
+  Works 
+} from './widgets'
+import { Navbar } from './components'
 import './App.css'
 
 const App = () => {
@@ -8,7 +18,14 @@ const App = () => {
       <div className='overlay'></div>
       <video src={bVideo} autoPlay loop muted />
       <div className='content'>
-        <h1>Welcome to Nathaniel Osei's Site</h1>
+        <Navbar />
+        <Header />
+        <Home />
+        <About />
+        <Skills />
+        <Testimonials />
+        <Works />
+        <Footer />
       </div>
     </div>
   )

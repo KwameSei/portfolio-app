@@ -20,6 +20,8 @@
 
   --primary-color: #edf2f8;
   --secondary-color: #313bac;
+  --tertiary-color: #f9f9f9;
+  --transparent-white-color: rgba(255, 255, 255, 0.983);
   --black-color: #030303;
   --lightGray-color: #e4e4e4;
   --gray-color: #6b7688;
@@ -30,6 +32,7 @@
   --blue-color: #0000ff;
   --yellow-color: #ffff00;
   --orange-color: #ffa500;
+  --gold-color: rgb(183,135,39);
   --purple-color: #800080;
   --pink-color: #ffc0cb;
   --cyan-color: #00ffff;

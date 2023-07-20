@@ -4,14 +4,18 @@
 }
 
 .app {
+  position: relative;
   width: 100%;
   height: 100%;
+  background-color: var(--primary-color);
+  font-family: var(--font-base);
 }
 
 video {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: fill;
+  overflow: hidden;
 }
 
 .content {

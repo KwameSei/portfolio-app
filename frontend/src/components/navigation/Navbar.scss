@@ -1,0 +1,91 @@
+.navbar {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px); // Blur the background
+  -webkit-backdrop-filter: blur(5px); // Blur the background
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  z-index: 2; // Make sure the navbar is on top of everything
+}
+
+.nav__logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  img {
+    width: 80px;
+    height: 80px;
+    margin-right: 1rem;
+    border-radius: 50%;
+
+    @media screen and (max-width: 2000px) { // For large screens
+      width: 100px;
+      height: 100px;
+    }
+
+    @media screen and (max-width: 1200px) { // For medium screens
+      width: 80px;
+      height: 80px;
+    }
+
+    @media screen and (max-width: 800px) { // For small screens
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+.nav__items {
+  display: flex;
+  flex: 1;  // Take up all the space
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+
+  li {
+    margin: 0 1rem;
+    cursor: pointer;
+    flex-direction: column;
+    transition: all 0.2s ease-in-out; // Smooth transition
+    &:hover {
+      transform: scale(1.1); // Scale up the element
+    }
+
+    div { // Targeting the div inside the li
+      width: 5px;
+      height: 5px;
+      background-color: transparent;
+      border-radius: 50%;
+      margin-bottom: 0.5rem;
+
+      @media screen and (max-width: 800px) { // For small screens
+        font-size: 1rem;
+      }
+
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--lightGray-color);
+      font-size: 1rem;
+      font-weight: bold;
+      flex-direction: column; // Align the text and the div vertically
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: all 0.3s ease-in-out; // Smooth transition
+      &:hover {
+        color: var(--gold-color);
+      }
+    }
+    &:hover {
+      div{
+        background: #fff;
+      }
+    }
+  }
+}
