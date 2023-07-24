@@ -1,4 +1,5 @@
 import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import bVideo from "./assets/background-video.mp4"
 import { 
   Header, 
@@ -14,20 +15,27 @@ import './App.css'
 
 const App = () => {
   return (
-    <div className='app'>
-      <div className='overlay'></div>
-      <video src={bVideo} autoPlay loop muted />
-      <div className='content'>
-        <Navbar />
-        <Header />
-        <Home />
-        <About />
-        <Skills />
-        <Testimonials />
-        <Works />
-        <Footer />
+    <Router>
+      <div className='app'>
+        <div className='overlay'></div>
+        <video
+          className='video-container ' 
+          src={bVideo} autoPlay loop muted 
+        />
+        {/* <div className='content'> */}
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/header" element={<Header />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/testimonials" element={<Testimonials />}  />
+            <Route path="/works" element={<Works />} />
+            <Route path="/footer" element={<Footer />} />
+          </Routes>
+        {/* </div> */}
       </div>
-    </div>
+    </Router>
   )
 }
 

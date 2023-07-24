@@ -1,0 +1,20 @@
+.home {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 69% 30%;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.grid-container.desktop {
+  justify-content: space-between;
+}
+
+.grid-container.mobile {
+  grid-template-columns: 1fr;
+  justify-content: center;
+}

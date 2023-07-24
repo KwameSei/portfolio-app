@@ -1,10 +1,11 @@
 import React from 'react'
 
 import './Works.scss'
+import '../wrapper.scss'
 
 const Works = () => {
   return (
-    <div>Works</div>
+    <div className="wrapper">This is works component</div>
   )
 }
 
