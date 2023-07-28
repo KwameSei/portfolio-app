@@ -1,0 +1,36 @@
+// SOCIAL ICONS
+.social {
+  position: absolute;
+  margin: 8% 0;
+  // bottom: 35%;
+  z-index: 1;
+
+    .social-icon {
+    font-size: 1.5rem;
+    float: bottom;
+    margin: 0 0.5rem;
+    transition: var(--transition);
+    color: var(--white-color);
+  }
+}
+
+// Nav Icons
+.nav-dots {
+  z-index: 1;
+  position: absolute;
+  right: 32%;
+  top: 12%;
+
+  .navigation_dots {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  .navigation_dots.active {
+    background-color: var(--white-color);
+  }
+}

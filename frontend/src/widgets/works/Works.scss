@@ -1,0 +1,222 @@
+.about {
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+  padding: 0.5rem;
+  margin-top: 2.5rem;
+}
+
+.project-categories {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 2rem;
+
+  .project-item {
+    margin: 0.3rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--white-color);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background-color: var(--primary-color);
+      color: #000;
+      transform: scale(1.1);
+    }
+  }
+  // Setting the active class for the selected category
+  .project-item.active {
+    background-color: var(--primary-color);
+    color: #000;
+    transform: scale(1.1);
+  }
+}
+
+.project-cards {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+
+  .project-card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5px;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  
+    .app__project-item {
+      width: 200px;
+      height: 370px;
+      flex-direction: column;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: var(--white-color);
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      // &:hover {
+      //   box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+      //   // transform: scale(1.1);
+      // }
+
+      @media screen and (min-width: 2000px) {
+        width: 470px;
+        padding: 1.25rem;
+        border-radius: 0.75rem;
+      }
+
+      @media screen and (max-width: 300px) {
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        margin: 1rem;
+      }
+
+      .app__project-item--overlay {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0.5rem;
+        background-color: rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        color: var(--white-color);
+        transition: all 0.2s ease;
+        cursor: pointer;
+  
+        div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          margin: 0 1.5rem;
+          background-color: rgba(255, 255, 255, 0.6);
+          color: #000;
+          transition: all 0.2s ease;
+
+          .app__project-item--overlay--icon {
+            font-size: 3rem;
+            margin: 0.5rem;
+            color: #fff;
+          }
+        }
+      }
+    }
+  
+    // .app__project-content {
+    //   flex-direction: column;
+    //   justify-content: center;
+    //   align-items: center;
+    //   margin: 1rem;
+    //   padding: 1rem;
+    //   border-radius: 0.5rem;
+    //   background-color: rgba(0, 0, 0, 0.6);
+    //   color: var(--white-color);
+    //   transition: all 0.2s ease-in-out;
+    //   cursor: pointer;
+  
+    //   &:hover {
+    //     background-color: var(--primary-color);
+    //     color: #000;
+    //     transform: scale(1.1);
+    //   }
+  
+    //   .project-title {
+    //     font-size: 1.5rem;
+    //     font-weight: 600;
+    //   }
+  
+    //   .project-description {
+    //     font-size: 1rem;
+    //     font-weight: 400;
+    //   }
+    // }
+  }
+}
+
+.app__project-item--image {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 215px;
+  border-radius: 0.5rem;
+  color: var(--white-color);
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    // background-color: var(--primary-color);
+    color: #fff;
+    transform: scale(1.1);
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+}
+
+.app__project-content {
+  padding: 0.5rem;
+  width: 100%;
+  position: relative;
+  flex-direction: column;
+
+  .title {
+    font-size: 1rem;
+    font-weight: 800;
+  }
+
+  .description {
+    max-height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  .app__project-category {
+    position: absolute;
+    bottom: -53px;
+    left: 35%;
+    padding: 0.5rem;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+  }
+}
+
+// .description {
+//   max-height: 100px;
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+//   word-break: break-all;
+//   display: -webkit-box;
+//   -webkit-line-clamp: 3;
+//   -webkit-box-orient: vertical;
+
+// }

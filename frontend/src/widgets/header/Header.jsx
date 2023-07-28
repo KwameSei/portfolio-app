@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { images } from '../../constants'
+import { Wrapper } from '../../wrapper'
 import '../wrapper.scss'
 
 import './Header.scss'
@@ -45,4 +46,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default Wrapper(Header, 'home');

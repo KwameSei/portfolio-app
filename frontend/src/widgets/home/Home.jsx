@@ -9,7 +9,7 @@ import {
   Works 
 } from '../../widgets'
 import './Home.scss'
-import Wrapper from '../../components/WidgetWrapper'
+import Social from '../../components/Social'
 
 const Home = () => {
   const isNotMobile = useMediaQuery('(min-width:1000px)');
@@ -26,7 +26,7 @@ const Home = () => {
           <Footer />
         </div>
         <div className="column-left">
-          <About />
+          <Skills />
         </div>
         {/* <div className="column-right"></div> */}
       </div>
