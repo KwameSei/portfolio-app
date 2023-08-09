@@ -20,9 +20,8 @@ const Home = () => {
         <div className="column-right">
           <Header />
           <About />
-          <Skills />
-          <Testimonials />
           <Works />
+          <Testimonials />
           <Footer />
         </div>
         <div className="column-left">

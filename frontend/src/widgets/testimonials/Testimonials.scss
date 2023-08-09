@@ -1,1 +1,188 @@
-rafce
+.testimonial {
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.carousel-container {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.testimonial-item {
+  width: 80%;
+  min-height: 320px;
+  display: flex;
+  // flex: 0 0 100%;
+  opacity: 0;
+  margin: 10px auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  transition: all 0.5s ease-in-out;
+  color: #fff;
+
+  img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: auto 10px;
+    background-color: #fff;
+  }
+
+  @media screen and (min-width: 2000px) {
+    min-height: 450px;
+
+    img {
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+    min-height: 350px;
+
+    img {
+      width: 250px;
+      height: 250px;
+      margin-left: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 850px) {
+    width: 100%;
+
+    img {
+      width: 150px;
+      height: 150px;
+      margin-left: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 1.5rem;
+
+    img {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.testimonial-item.active {
+  opacity: 1;
+}
+
+// .testimonial-item img {
+//   width: 100px;
+//   height: 100px;
+//   border-radius: 50%;
+//   margin-bottom: 10px;
+// }
+
+.testimonial-item h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.testimonial-item p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.testimonial-content {
+  padding: 0 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  text-align: left;
+  align-items: flex-start;
+
+  p {
+    font-size: 14px;
+    line-height: 1.6rem;
+  }
+
+  .info {
+    width: 100%;
+    text-align: end;
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    margin: 0 2rem;
+  }
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+
+  .button {
+    border: none;
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    padding-left: 4px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #fff;
+    }
+  }
+}
+
+// STYLING BRANDS
+.testimonial-brands {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto auto;
+
+  div {
+    width: 150px;
+    margin: 0.5rem auto;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      filter: grayscale(1);
+    }
+
+    &:hover {
+      img {
+        filter: grayscale(0);
+      }
+    }
+
+    @media screen and (min-width: 2000px) {
+      width: 120px;
+      margin: 1rem auto;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 100px;
+      margin: 0.5rem auto;
+    }
+  }
+}

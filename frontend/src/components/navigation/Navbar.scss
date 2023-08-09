@@ -18,6 +18,20 @@
   justify-content: flex-start;
   align-items: center;
 
+  p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--lightGray-color);
+    margin-left: 1rem;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; // Smooth transition
+    &:hover {
+      color: var(--gold-color);
+    }
+  }
+
   img {
     width: 60px;
     height: 60px;
@@ -90,7 +104,7 @@
     }
   }
 
-  @media screen and (max-width: 800px) { // For small screens
+  @media screen and (max-width: 900px) { // For small screens
     display: none;
   }
 }
@@ -102,6 +116,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 5rem;
   cursor: pointer;
   position: absolute;
   transition: all 0.3s ease-in-out; // Smooth transition
@@ -111,11 +126,17 @@
   position: relative;
   background-color: var(--gold-color);
 
-  svg {
+  .menu-icon {
     width: 25px;
     height: 25px;
     fill: var(--darkGray-color);
+
+    // @media screen and (max-width: 800px) { // For small screens
+    //   width: 20px;
+    //   height: 20px;
+    // }
   }
+  
 
   // div {
   //   position: fixed;
@@ -143,7 +164,7 @@
   //   }
   // }
 
-  @media  screen and (min-width: 800px) { // For small screens
+  @media  screen and (min-width: 900px) { // For small screens
     display: none;
   }
 }
@@ -206,7 +227,6 @@
     top: 5%;
     cursor: pointer;
     margin-bottom: 1rem;
-    margin-left: auto;
     font-size: 14px;
     color: #000;
     background-color: var(--gold-color);

@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { motion } from 'framer-motion'
 import { images } from '../../constants'
-import { Wrapper } from '../../wrapper'
+import { Wrapper, MotionWrap } from '../../wrapper'
 
 import './About.scss'
 import '../wrapper.scss'
@@ -38,4 +38,7 @@ const About = () => {
   )
 }
 
-export default Wrapper(About, 'about');
+export default Wrapper(
+  MotionWrap(About, 'about'), 
+  'about',
+  );

@@ -22,6 +22,19 @@ video {
   z-index: 0;
 }
 
+@media screen and (max-width: 768px) {
+  video {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    position: fixed;
+    overflow: hidden;
+    z-index: 0;
+  }
+}
+
 /* .content {
   position: absolute;
   width: 100%;

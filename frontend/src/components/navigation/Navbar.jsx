@@ -19,7 +19,7 @@ const Navbar = () => {
         <p>Nathaniel Osei</p>
       </div>
       <ul className='nav__items'>
-        {['home', 'about', 'skills', 'testimonials', 'works'].map((item) => (
+        {['home', 'about', 'skills', 'testimonials', 'works', 'contact'].map((item) => (
           <li className='nav__links' key={`link-${item}`}>
             <div />
             <a href={`#${item}`}>{item}</a>
@@ -51,7 +51,7 @@ const Navbar = () => {
           >
             <Close onClick={toggleMenu} className='close-icon' />
             <ul className='menu__items'>
-              {['home', 'about', 'skills', 'testimonials', 'works'].map((item) => (
+              {['home', 'about', 'skills', 'testimonials', 'works', 'contact'].map((item) => (
                 <li key={item}>
                   <a href={`#${item}`} onClick={toggleMenu}>{item}</a>
                 </li>

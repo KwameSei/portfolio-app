@@ -1,9 +1,9 @@
-.about {
+.works {
   flex: 1;
   width: 100%;
   flex-direction: column;
   padding: 0.5rem;
-  margin-top: 2.5rem;
+  margin-top: 0.5rem;
 }
 
 .project-categories {
@@ -205,8 +205,43 @@
     left: 35%;
     padding: 0.5rem;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.9);
-    color: #000;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--white-color);
+
+    animation-name: slidein;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes slidein {
+    0% {
+      transform: rotate(0deg);
+    }
+    10% {
+      transform: rotate(10deg);
+    }
+    30% {
+      transform: rotate(0deg);
+    }
+    40% {
+      transform: rotate(-10deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    60% {
+      transform: rotate(5deg);
+    }
+    70% {
+      transform: rotate(0deg);
+    }
+    80% {
+      transform: rotate(-5deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
   }
 }
 

@@ -43,7 +43,7 @@ const Works = () => {
     }, 500);
   }
   return (
-    <div className="about wrapper">
+    <div className="works wrapper">
       <h2 className='head-text'>
         For out <span>projects</span> I have worked on.
       </h2>
