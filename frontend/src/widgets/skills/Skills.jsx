@@ -14,12 +14,13 @@ import './Skills.scss'
 //   { name: 'React', imageURL: images.react, id: 1,}]
 
 const Skills = () => {
+  const serverURL = import.meta.env.VITE_SERVER_URL;
   const [skills, setSkills] = useState([]);
   const [experiences, setExperiences] = useState([]);
 
   const getSkills = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/skills/get-skills');
+      const res = await axios.get(`${serverURL}/api/skills/get-skills`);
       const { data } = res;
       setSkills(data.skills);
       console.log('API response:', data);
@@ -30,7 +31,7 @@ const Skills = () => {
 
   const getExperience = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/experience/get-experience');
+      const response = await axios.get(`${serverURL}/api/experience/get-experience`);
       const { data } = response;
       setExperiences(data.experiences);
     } catch (error) {

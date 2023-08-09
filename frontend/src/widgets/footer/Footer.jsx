@@ -8,6 +8,7 @@ import './Footer.scss'
 import '../wrapper.scss'
 
 const Footer = () => {
+  const serverURL = import.meta.env.VITE_SERVER_URL;
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -24,7 +25,7 @@ const Footer = () => {
     setLoading(true);
     setIsFormSubmitted(true);
     try {
-      const res = await axios.post('http://localhost:5000/api/contact/create-contact', formData);
+      const res = await axios.post(`${serverURL}/api/contact/create-contact`, formData);
       const { data } = res;
       console.log('Contact API response:', data);
       setFormData({ name: '', email: '', message: '' });

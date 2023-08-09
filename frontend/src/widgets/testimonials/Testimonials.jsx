@@ -7,13 +7,14 @@ import '../wrapper.scss';
 import './Testimonials.scss';
 
 const Testimonials = () => {
+  const serverURL = import.meta.env.VITE_SERVER_URL;
   const [brands, setBrands] = useState([])
   const [testimonials, setTestimonials] = useState([])
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const getTestimonials = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/testimonials/get-testimonial');
+      const res = await axios.get(`${serverURL}/api/testimonials/get-testimonial`);
       const { data } = res;
       setTestimonials(data.testimonials);
       console.log('Testimonials API response:', data);
@@ -25,7 +26,7 @@ const Testimonials = () => {
 
   const getBrands = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/brands/get-brands');
+      const res = await axios.get(`${serverURL}/api/brands/get-brands`);
       const { data } = res;
       setBrands(data.brands);
       console.log('Brands API response:', data);
