@@ -49,7 +49,7 @@ const Works = () => {
       </h2>
 
       <div className="project-categories">
-        {[{name: 'All'}, {name: 'React'}, {name: 'Node'}, {name: 'Python'}, {name: 'Django'}, {name: 'JavaScript'}, {name: 'HTML'}, {name: 'CSS'}, {name: 'MongoDB'}, {name: 'PostgreSQL'}, {name: 'Sequelize'}, {name: 'Mongoose'}, {name: 'Express'}, {name: 'Redux'}, {name: 'Git'}, {name: 'Heroku'}, {name: 'Netlify'}, {name: 'Vercel'}, {name: 'Figma'}, {name: 'Material UI'}, {name: 'Bootstrap'}, {name: 'Sass'}, {name: 'Framer Motion'}, {name: 'React Router'}, {name: 'React Hooks'}, {name: 'React Context'}, {name: 'React Redux'}, {name: 'React Testing Library'}, {name: 'Jest'}, {name: 'Enzyme'}, {name: 'React Spring'}, {name: 'React Scroll'}].map((item, index) => (
+        {[{name: 'All'}, {name: 'React'}, {name: 'Node'}, {name: 'Python'}, {name: 'JavaScript'}, {name: 'HTML'}, {name: 'CSS'}, {name: 'MongoDB'}, {name: 'Express'}, {name: 'Redux'}, {name: 'Git'}, {name: 'Material UI'}, {name: 'Sass'}, {name: 'Framer Motion'}].map((item, index) => (
           <div 
             className={`project-item ${active === item.name ? 'active' : ''}`}
             key={item.name + index}
