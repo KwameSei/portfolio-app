@@ -41,21 +41,39 @@ const Testimonials = () => {
     getBrands();
   }, [])
 
-  const nextTestimonial = () => {
+  const autoNextTestimonial = () => {
     if (currentIndex < testimonials.length - 1) {
-      setCurrentIndex(prevState => prevState + 1)
+      setCurrentIndex(currentIndex + 1);
     } else {
-      setCurrentIndex(0)
+      setCurrentIndex(0);
     }
+  };
+
+  const nextTestimonial = () => {
+    // if (currentIndex < testimonials.length - 1) {
+    //   setCurrentIndex(prevState => prevState + 1)
+    // } else {
+    //   setCurrentIndex(0)
+    // }
+    autoNextTestimonial();
   }
 
   const prevTestimonial = () => {
     if (currentIndex > 0) {
-      setCurrentIndex(prevState => prevState - 1)
+      // setCurrentIndex(prevState => prevState - 1)
+      setCurrentIndex(currentIndex - 1)
     } else {
       setCurrentIndex(testimonials.length - 1)
     }
   }
+
+  // Set auto slide
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextTestimonial();
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [currentIndex])
 
   return (
     <div className='wrapper testimonial'>
@@ -64,7 +82,7 @@ const Testimonials = () => {
           <motion.div
             className={`testimonial-item ${index === currentIndex ? 'active' : ''}`}
             key={index}
-            initial={{ opacity: 0 }}
+            initial={{ opacity: index === currentIndex ? 1 : 0 }}
             animate={{ opacity: index === currentIndex ? 1 : 0 }}
             transition={{ duration: 0.5 }}
           >
